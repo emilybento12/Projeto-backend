@@ -4,7 +4,7 @@ import ProductManager from '../dao/ProductManager.js'
 const router = Router()
 const manager = new ProductManager()
 
-// Rota para obter todos os produtos
+// Rota para listar todos os produtos
 router.get('/', async (req, res) => {
   try {
     const products = await manager.getAll()
@@ -42,7 +42,6 @@ router.get('/:pid', async (req, res) => {
 })
 
 //Rota para atualizar um produto
-//Rota para atualizar um produto
 router.put('/:pid', async (req, res) => {
   const { pid } = req.params;
   const updateData = req.body;
@@ -60,7 +59,6 @@ router.put('/:pid', async (req, res) => {
 
 //Delete
 
-// Rota para deletar um produto
 router.delete('/:pid', async (req, res) => {
   const { pid } = req.params;
 

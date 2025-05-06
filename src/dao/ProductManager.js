@@ -1,13 +1,12 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-//const filePath = path.resolve('src/data/products.json')
 const filePath = path.resolve('src/data/products.json')
 console.log("CAMINHO DO JSON:", filePath)
 
 export default class ProductManager {
   constructor() {
-    this.path = filePath // agora o caminho está disponível como this.path
+    this.path = filePath
   }
   async getAll() {
     try {
@@ -38,7 +37,7 @@ export default class ProductManager {
       return newProduct
     } catch (error) {
       console.error("Erro ao adicionar produto:", error)
-      throw error  // Repassa o erro
+      throw error 
     }
   }
 
@@ -51,15 +50,12 @@ export default class ProductManager {
         return null; // Produto não encontrado
       }
   
-    
-  
-      // Atualiza o produto no índice encontrado
       products[index] = { ...products[index], ...updateData };
   
       // Escreve o novo array no arquivo
       await fs.writeFile(this.path, JSON.stringify(products, null, 2));
   
-      return products[index]; // Retorna o produto atualizado
+      return products[index]; 
     } catch (error) {
       console.error("Erro ao atualizar produto:", error);
       throw error;

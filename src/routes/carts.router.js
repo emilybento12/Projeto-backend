@@ -4,7 +4,6 @@ import CartManager from '../dao/CartManager.js';
 const router = Router();
 const cartManager = new CartManager();
 
-// 🔹 POST /api/carts/ → Cria um novo carrinho
 router.post('/', async (req, res) => {
   try {
     const cart = await cartManager.createCart();
@@ -14,7 +13,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-// 🔹 GET /api/carts/:cid → Lista os produtos do carrinho
 router.get('/:cid', async (req, res) => {
   try {
     const cart = await cartManager.getCartById(req.params.cid);
@@ -27,7 +25,6 @@ router.get('/:cid', async (req, res) => {
   }
 });
 
-// 🔹 POST /api/carts/:cid/product/:pid → Adiciona produto ao carrinho
 router.post('/:cid/product/:pid', async (req, res) => {
   const { cid, pid } = req.params;
   try {
