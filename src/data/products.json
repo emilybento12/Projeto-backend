@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1746486996533",
+    "title": "Casaco Off White",
+    "description": "Casaco de inverno na cor off white",
+    "code": "CAS789",
+    "price": 209.9,
+    "status": true,
+    "stock": 10,
+    "category": "Roupas",
+    "thumbnails": [
+      "casaco1.jpg",
+      "casaco2.jpg"
+    ]
+  },
+  {
+    "id": "1746487073252",
+    "title": "Vestido de Couro Cherry",
+    "description": "Vestido elegante de couro na cor cherry",
+    "code": "VES456",
+    "price": 139.9,
+    "status": true,
+    "stock": 10,
+    "category": "Roupas",
+    "thumbnails": [
+      "vestido1.jpg",
+      "vestido2.jpg"
+    ]
+  }
+]
